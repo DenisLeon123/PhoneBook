@@ -14,8 +14,14 @@ public class PhoneBook {
     private static String phoneNumber;
     private static int countPhoneNumber;
 
-    public PhoneBook() {
+    static {
+        reader = new BufferedReader(new InputStreamReader(System.in));
+        error = false;
+        countPhoneNumber = 0;
     }
+
+//    public PhoneBook() {
+//    }
 
     public static void main(String[] args) throws IOException {
         System.out.println("Введить ФИО в виде \"Фамилия Имя Отчество через пробел\"");
@@ -33,7 +39,6 @@ public class PhoneBook {
                 add(line);
             }
         }
-
     }
 
     public static boolean checkPhoneNumber(String phoneNumber) {
@@ -91,9 +96,4 @@ public class PhoneBook {
     public static void list(String[][] book) {
     }
 
-    static {
-        reader = new BufferedReader(new InputStreamReader(System.in));
-        error = false;
-        countPhoneNumber = 0;
-    }
 }
