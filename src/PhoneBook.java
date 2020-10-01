@@ -33,10 +33,7 @@ public class PhoneBook {
                 phoneNumber = reader.readLine();
                 add(line);
             }
-
         }
-
-        //Добавить считывание ввода пользователя в цикле
     }
 
     public static boolean checkPhoneNumber(String phoneNumber) {
@@ -98,7 +95,6 @@ public class PhoneBook {
             mPhoneBook[countPhoneNumber][1] =phoneNumber;
             countPhoneNumber++;
         }
-
     }
 
     public static void list(String[][] book) {
